@@ -66,7 +66,7 @@ def build_default_system() -> SolarSystem:
 def menu() -> None:
     print("\nSolar System")
     print("1) Tell me everything about a planet")
-    print("2) How massive is a planet?")
+    print("2) What is the size of a specific planet?")
     print("3) Is a name in the list of planets?")
     print("4) How many moons does a planet have?")
     print("5) List all planet names")
