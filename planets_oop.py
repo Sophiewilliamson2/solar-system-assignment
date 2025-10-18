@@ -1,9 +1,12 @@
 # DISCLAIMER: This code was assisted by ChatGPT
 """
-A simple, class-based Solar System info program.
-- Object orientation (Planet, SolarSystem)
-- Appropriate data structures (dict for planets, list for moons)
-- Beginner-friendly CLI menu and validation
+This program displays simple information about planets in our solar system.  
+It demonstrates the learning from the last 7 weeks including:
+- OOP - Object-orientated programming (Planet, SolarSystem)
+- Classes have been used throughout the program
+- Appropriate data structures (dictionary for planets, list for moons)
+- A simple menu has been provided
+- User input is validated
 - No files / DB / web
 """
 
