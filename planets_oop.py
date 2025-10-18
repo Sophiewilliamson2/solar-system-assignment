@@ -64,7 +64,7 @@ def build_default_system() -> SolarSystem:
     return SolarSystem(data)
 
 
-# ----------------- UI (Beginner-friendly CLI) -----------------
+# User Input Menu
 
 def menu() -> None:
     print("\nSolar System")
