@@ -1,7 +1,8 @@
 # Solar System Program 🌍🪐
 
 This is my Python program for the Week 4 assessment.  
-It shows information about planets in the solar system and lets the user ask questions through a simple menu.
+It shows information about planets in the solar system and lets the user ask questions through a simple menu and also has the option for a free style question
+and answer section where you can ask 4 of the most common types of questions
 
 ---
 
