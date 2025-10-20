@@ -40,7 +40,7 @@ Expected "This is an invalid choice. Please try again and enter 1, 2, 3, 4, 5, 6
 
 3. Check Dictionary data loading (JSON)
 Steps: Run program and choose option 5
-Expected result: Lists all plans in order in planets.json dictionary file:
+Expected result: Lists all planets in order in planets.json dictionary file.  This should be 8 planet names.
 Planets we have in our list:
 - Mercury
 - Venus
@@ -51,8 +51,7 @@ Planets we have in our list:
 - Uranus
 - Neptune
 
-
-[TC-2] Menu items
+[TC-2] Menu items 1-5
 
 Menu item 1) I can tell you lots of interesting facts about a particular planet
 Steps: From menu choose 1 → enter "Saturn"
@@ -74,7 +73,31 @@ Menu item 4) How many moons does a particular planet have?
 Steps: From menu choose 4 → enter "Saturn"
 Expected result: Saturn has 4 moons.
 
-Menu item 5) 
+Menu item 5) List all planet in this program
+Steps: From menu choose 5
+Expected result: Lists all planets in order as per planets.json dictionary file.  This should be 8 planet names.
+Planets we have in our list:
+- Mercury
+- Venus
+- Earth
+- Mars
+- Jupiter
+- Saturn
+- Uranus
+- Neptune
+
+[TC-2] Menu items 6 Free text questions and answers
+
+Q1: Ask a free-text question about a planet
+Ask everything about a planet
+Steps: type Tell me everything about Saturn
+Expected result: 
+Name: Saturn
+Mass: 5.683e+26 kg
+Distance from Sun: 9.537 AU
+Moons (4): Titan, Enceladus, Rhea, Mimas
+
+Q2: 
 
 [TC-3] Mass of Neptune
 - Choose 2 → enter "Neptune"
@@ -105,4 +128,8 @@ Menu item 5)
 - Expect the same result as "Earth".
 
 Exit Criteria
-- All test cases behave as expected.
+- All menu options work without unhandled exceptions
+- Data correctly loads from JSON: if file missing a warning is given and the program continues gracefully
+- Free text question / answer works correctly
+- Case insensitive planet look up succeeds
+- Clear error messages are shown for planets not on our list, invalid or empty input
