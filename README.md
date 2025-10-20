@@ -1,14 +1,14 @@
 # Solar System Program 🌍🪐
 
-This is my Python program for the Week 4 assessment.  
+This is my Python program demonstrating what I have learned over the last 7 weeks. 
 It shows information about planets in the solar system and lets the user ask questions through a simple menu and also has the option for a free style question
 and answer section where you can ask 4 of the most common types of questions
 
 ---
 
-## Files
-- `planets_oop.py` → the main program
-- `TEST_PLAN.md` → my test plan
+## Files which make up this program are:
+planets_oop.py This is the main program
+TEST_PLAN.md` → my test plan
 
 ---
 
