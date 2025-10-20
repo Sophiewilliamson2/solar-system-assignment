@@ -2,8 +2,8 @@
 Test Plan — Solar System Program
 
 Purpose and scope
-- The scope of this test to is verify that the program loads without errors
-- Planet data is loaded from separate dictionary file planet.json and supports the 6 menu items which are
+- The scope of this test to is verify that the program starts without unhandled exceptions or errors
+- Verity planet data is loaded from separate JSON file (planet.json) and supports menu options 1-7 (listed)
 1) I can tell you lots of interesting facts about a particular planet
 2) Do you want to know the just the mass of a planet?
 3) Want to check if your planet is on our list?
@@ -11,28 +11,30 @@ Purpose and scope
 5) List all planet in this program
 6) Ask a free-text question about a planet (eg. 'How massive is Jupiter?' or 'Tell me everything about Mars')
 7) Quit the program
-- The test plan is to
+
+The test plan is to
 - verify class behaviours
 - Data correctness
 - Menu flows
-- Input validation.
+- Input validation
+- Free text questions and answers
 
 Test Environment
-- Python (version 3)
+- Python (version 3.x)
 - Command to be run from terminal python3 planets_oop.py
 - Files required:
 - planets_oop.py 
 - planets.json (this MUST be stored in the same folder as planets_oop.py)
 
 Assumptions
-- planets.json has objects with keys: name, mass_kg, distance_au, moons (list)
+- Each JSON row listed has: name, mass_kg, distance_au, moons (list)
 
 Test Cases (TC)
 
 TC-1 Start
 1. Start program
 Steps: Run python planets_oop.py
-Expected result: Welcome message and menu options 1–7 displayed.  
+Expected result: Welcome message and menu options 1–7 displayed. No traceback
 
 2. Invalid menu choice
 Steps: Enter X or 9
@@ -55,7 +57,7 @@ TC-2 Menu items 1-5
 
 Menu item 1) I can tell you lots of interesting facts about a particular planet
 Steps: From menu choose 1 → enter "Saturn"
-Expected result: Multi-line summary:-
+Expected result: 
 Name: Saturn
 Mass: 5.683e+26 kg
 Distance from Sun: 9.537 AU
@@ -127,7 +129,7 @@ Expected result: Please enter a non-empty name.
 
 Exit Criteria
 - All menu options work without unhandled exceptions
-- Data correctly loads from JSON: if file missing a warning is given and the program continues gracefully
+- Data correctly loads from JSON or fails gracefully with clear message
 - Free text question / answer works correctly
 - Case insensitive planet look up succeeds
 - Clear error messages are shown for planets not on our list, invalid or empty input
