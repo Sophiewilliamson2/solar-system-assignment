@@ -29,7 +29,7 @@ Assumptions
 
 Test Cases (TC)
 
-[TC-1] Start & menu
+TC-1 Start
 1. Start program
 Steps: Run python planets_oop.py
 Expected result: Welcome message and menu options 1–7 displayed.  
@@ -51,7 +51,7 @@ Planets we have in our list:
 - Uranus
 - Neptune
 
-[TC-2] Menu items 1-5
+TC-2 Menu items 1-5
 
 Menu item 1) I can tell you lots of interesting facts about a particular planet
 Steps: From menu choose 1 → enter "Saturn"
@@ -86,46 +86,44 @@ Planets we have in our list:
 - Uranus
 - Neptune
 
-[TC-2] Menu items 6 Free text questions and answers
+TC-3 Menu items 6 Free text questions and answers
 
-Q1: Ask a free-text question about a planet
-Ask everything about a planet
-Steps: type Tell me everything about Saturn
-Expected result: 
-Name: Saturn
+Q1: Ask a free-text question to ask for all information stored about a planet
+Steps: type "Tell me everything you have stored about Saturn"
+Expected result: Name: Saturn
 Mass: 5.683e+26 kg
 Distance from Sun: 9.537 AU
 Moons (4): Titan, Enceladus, Rhea, Mimas
 
-Q2: 
+Q2: Ask a free-text question to find out the mass of a planet
+Steps: type "How massive is Neptune?"
+Expected result: Neptune has a mass of 1.024e+26 kg.
 
-[TC-3] Mass of Neptune
-- Choose 2 → enter "Neptune"
-- Expect "Neptune has a mass of ..." in scientific notation.
+Q3: Ask a free-text question to see if a planet is in the list
+Steps: type "Is pluto in your planet list?"
+Expected result: No (as Pluto is not in the dictionary list of planets)
 
-[TC-4] Is Pluto in the list?
-- Choose 3 → enter "Pluto"
-- Expect "No."
+Q5: Ask a free-text question to find out how many moons a particular planet has
+Steps: type "How many moons does Jupiter have?"
+Expected result: Jupiter has 4 moons.
 
-[TC-5] Moons of Earth
-- Choose 4 → enter "Earth"
-- Expect "Earth has 1 moon."
+Q6: Ask a free-text question about a planet which is not in the planet dictionary/list
+Steps: type "Tell me everything about planet Clingon"
+Expected result: Sorry, I don't understand that question.  I can answer things like:
+Tell me everything about Saturn
+How massive is Neptune?
+Is Pluto in the list of planets?
+How many moons does Earth have?
 
-[TC-6] List all planet names
-- Choose 5
-- Expect eight names in order Mercury → Neptune.
+TC-4 verify data input and data handling
 
-[TC-7] Unknown name
-- Choose 1 (or 2/4) → enter "Ceres"
-- Expect "Ceres is not in the list of planets."
+Q1. Case insensitive planet lookup
+Steps: From menu choose 2 → enter "JuPiTer"
+Expected result: Jupiter has a mass of 1.898e+27 kg. That's massive!
 
-[TC-8] Empty input validation
-- Choose 2 → press Enter
-- Expect "Please enter a non-empty name."
-
-[TC-9] Case-insensitive lookup
-- Choose 4 → enter "eArTh"
-- Expect the same result as "Earth".
+Q2: Handling empty input
+Steps: Steps: From menu choose 2 → enter 
+Expected result: Please enter a non-empty name.
 
 Exit Criteria
 - All menu options work without unhandled exceptions
