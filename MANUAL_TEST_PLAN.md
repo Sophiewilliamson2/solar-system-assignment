@@ -13,7 +13,7 @@ Purpose and scope
 7) Quit the program
 
 The test plan is to
-- verify class behaviours
+- Verify class behaviours
 - Data correctness
 - Menu flows
 - Input validation
